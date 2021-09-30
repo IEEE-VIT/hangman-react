@@ -38,7 +38,7 @@ $ npm install
 
 It should create a `node_modules` folder, and you're good to go! :)
 
-2. All the components are setup inside `hangman/src/components`. Most of your code should go there.
+2. All the components are setup inside `hangman-react/src/components`. Most of your code should go there.
 
 3. To start the project, simply run the following command:
 
