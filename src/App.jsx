@@ -6,8 +6,8 @@ const App = () => {
   return (
     <div className="App">
       Hangman{" "}
-      {/* Maintain a state for correct letters, wrong letters, remaining letters. For this, the letters component and the hangman component along with guessing should be imported. Import Guessing as well, to know what letters are correct. 
-      Wrong letters is passed as a prop to HangmanFigure Component. */}{" "}
+      {/* Maintain a state for correct letters, wrong letters, remaining letters. For this, the Letters component and the Hangman component as well as the Guessing component should be imported.
+      Wrong letters is passed as a prop to HangmanFigure Component, correct letters passed to Guessing. */}{" "}
     </div>
   );
 };
