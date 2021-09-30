@@ -1,70 +1,72 @@
-# Hangman-React
-A simple React app that lets you play Hangman in your browser
+<p align="center"><img width="40%" src="https://hacktoberfest.digitalocean.com/_nuxt/img/logo-hacktoberfest-full.f42e3b1.svg"/></p>
 
+# Hacktoberfest 2021 with IEEE-VIT ❤️
 
-## Available Scripts
+Hangman-React is a simple Hangman Game built using React JS.
 
-In the project directory, you can run:
+Support open source software by participating in [Hacktoberfest](https://hacktoberfest.digitalocean.com) and get goodies and a free t-shirt! 💛
 
-### `yarn start`
+> Please check all issues labelled as `hacktoberfest` to start contributing!
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+Kindly consider leaving a ⭐ if you like the repository and our organisation.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+## Getting Started
 
-### `yarn test`
+-   Fork it.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+-   Clone your forked repo and move inside it:
 
-### `yarn build`
+`git clone https://github.com/IEEE-VIT/hangman-react.git && cd hangman-react`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+-   Checkout to a new branch to work on an issue:
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+`git checkout -b my-amazing-feature`
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+-   Setup
 
-### `yarn eject`
+1. To setup this project, simply run the following command:
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+```bash
+$ yarn install
+```
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+or
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+```bash
+$ npm install
+```
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+It should create a `node_modules` folder, and you're good to go! :)
 
-## Learn More
+2. All the components are setup inside `hangman/src/components`. Most of your code should go there.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+3. To start the project, simply run the following command:
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+```bash
+$ yarn start
+```
 
-### Code Splitting
+or
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+```bash
+$ npm start
+```
 
-### Analyzing the Bundle Size
+-   Once you're all done coding, it's time to open a PR :)
+    Run the following commands from the root of the project directory:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+`git add .`
 
-### Making a Progressive Web App
+`git commit -m "A short description about the feature."`
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+`git push origin <my-amazing-feature>`
 
-### Advanced Configuration
+Open your forked repo in your browser and then raise a PR to the `master` branch of this repository!
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+## Contributing
 
-### Deployment
+To start contributing, check out [CONTRIBUTING.md](https://github.com/IEEE-VIT/hangman-react/blob/master/CONTRIBUTING.md). New contributors are always welcome to support this project. If you want something gentle to start with, check out issues labelled as `easy` or `good-first-issue`. Check out issues labelled as `hacktoberfest` if you are up for some grabs! :)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+## License
 
-### `yarn build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+This project is licensed under [MIT](https://github.com/IEEE-VIT/hangman-react/blob/master/LICENSE.md)
