@@ -1,14 +1,15 @@
 import React from "react";
 import "./App.css";
-import { words } from "./utils/helpers";
+
+const randomWords = require("random-words");
 
 const getRandomWord = () => {
-  const wordsPool = words();
-  return wordsPool[Math.floor(Math.random() * wordsPool.length)];
+  return randomWords();
 };
 
 const App = () => {
   const [currentWord] = React.useState(getRandomWord());
+  console.log(currentWord);
 
   return (
     <div className="App">
