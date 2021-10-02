@@ -1,10 +1,12 @@
 export const checkWinner = (correct, wrong, word) => {
-  /*Define condition for win and loop it.*/
-  /*Define condition for lose*/
+  console.log({ correct, wrong, word });
+  // eslint-disable-next-line spaced-comment
+  /*Define condition for win and loop it. */
+  /* Define condition for lose */
 };
 
 export const alphabets = () => {
-  /*Get alphabets of the English language*/
+  /* Get alphabets of the English language */
 };
 
 export const words = () => {
@@ -18,5 +20,5 @@ export const words = () => {
     "VIT",
   ];
 
-  /*Import this in Guessing component and use it.*/
+  /* Import this in Guessing component and use it. */
 };
