@@ -1,7 +1,5 @@
 export const checkWinner = (correct, wrong, word) => {
-  console.log({ correct, wrong, word });
-  // eslint-disable-next-line spaced-comment
-  /*Define condition for win and loop it. */
+  /* Define condition for win and loop it. */
   /* Define condition for lose */
 };
 
