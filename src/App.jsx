@@ -10,7 +10,7 @@ import { ThemeContext } from "./context/theme-context";
 // };
 
 const App = () => {
-  const [currentWord] = React.useState(getRandomWord());
+  //const [currentWord] = React.useState(getRandomWord());
   const { theme, toggle, dark } = React.useContext(ThemeContext);
 
   return (
