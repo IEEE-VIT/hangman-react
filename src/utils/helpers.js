@@ -1,4 +1,5 @@
-export const checkWinner = (correct, wrong, word) => {
+export const checkWinner = () => {
+  // Accept 3 arguments (correct, wrong and word)
   /* Define condition for win and loop it. */
   /* Define condition for lose */
 };
