@@ -1,7 +1,7 @@
 import React from "react";
 import "./App.css";
-
-const randomWords = require("random-words");
+import randomWords from "random-words";
+// const randomWords = require("random-words");
 
 const getRandomWord = () => {
   return randomWords();
