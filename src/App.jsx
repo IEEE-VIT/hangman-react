@@ -1,15 +1,15 @@
 import React from "react";
 import "./App.css";
-// import { words } from "./utils/helpers";
+import randomWords from "random-words";
 import { ThemeContext } from "./context/theme-context";
 
-// const getRandomWord = () => {
-//   const wordsPool = words();
-//   return wordsPool[Math.floor(Math.random() * wordsPool.length)];
-// };
+const getRandomWord = () => {
+  return randomWords();
+};
 
 const App = () => {
-  // const [currentWord] = React.useState(getRandomWord());
+  const [currentWord] = React.useState(getRandomWord());
+  console.log(currentWord);
   const { theme, toggle, dark } = React.useContext(ThemeContext);
 
   return (
