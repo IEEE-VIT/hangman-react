@@ -11,7 +11,6 @@ const getRandomWord = () => {
 
 const App = () => {
   const [currentWord, setCurrentWord] = React.useState("");
-  console.log(currentWord);
   const { theme, toggle, dark } = React.useContext(ThemeContext);
   const [correctLetters] = React.useState([]);
   const [wrongLetters] = React.useState([1, 2, 3, 4, 5]);
@@ -71,7 +70,7 @@ const App = () => {
           Hint
         </button>
       )}
-      {showHint && <h3 className="hint">{hint}</h3>}
+      {showHint && <h3 className="hint">{hint.toUpperCase()}</h3>}
     </div>
   );
 };

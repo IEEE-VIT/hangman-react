@@ -14,7 +14,6 @@ export const getRemainingLetters = (currentWord, correctLetters) => {
   const remainingLetters = letters.filter((letter) => {
     return !correctLetters.includes(letter);
   });
-  console.log(remainingLetters);
   return remainingLetters;
 };
 
