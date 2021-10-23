@@ -1,16 +1,16 @@
 import React from "react";
 import "./App.css";
-// import { words } from "./utils/helpers";
+import randomWords from "random-words";
 import { ThemeContext } from "./context/theme-context";
 import Hint from "./components/hint/hint.component";
 
-// const getRandomWord = () => {
-//   const wordsPool = words();
-//   return wordsPool[Math.floor(Math.random() * wordsPool.length)];
-// };
+const getRandomWord = () => {
+  return randomWords();
+};
 
 const App = () => {
-  // const [currentWord] = React.useState(getRandomWord());
+  const [currentWord] = React.useState(getRandomWord());
+  console.log(currentWord);
   const { theme, toggle, dark } = React.useContext(ThemeContext);
   // const [correctLetters,setCorrectLetters] = React.useState([]);
   const [wrongLetters] = React.useState(["A", "B", "F", "S", "W"]);
