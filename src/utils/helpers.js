@@ -8,6 +8,16 @@ export const alphabets = () => {
   /* Get alphabets of the English language */
 };
 
+export const getRemainingLetters = (currentWord, correctLetters) => {
+  /* Get remaining letters of the word */
+  const letters = currentWord.split("");
+  const remainingLetters = letters.filter((letter) => {
+    return !correctLetters.includes(letter);
+  });
+  console.log(remainingLetters);
+  return remainingLetters;
+};
+
 export const words = () => {
   return [
     "IEEEVIT",

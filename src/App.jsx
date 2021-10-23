@@ -3,6 +3,7 @@ import "./App.css";
 import randomWords from "random-words";
 import { ThemeContext } from "./context/theme-context";
 import Hint from "./components/hint/hint.component";
+import { getRemainingLetters } from "./utils/helpers";
 
 const getRandomWord = () => {
   return randomWords();
@@ -12,9 +13,9 @@ const App = () => {
   const [currentWord] = React.useState(getRandomWord());
   console.log(currentWord);
   const { theme, toggle, dark } = React.useContext(ThemeContext);
-  // const [correctLetters,setCorrectLetters] = React.useState([]);
-  const [wrongLetters] = React.useState(["A", "B", "F", "S", "W"]);
-  const [remainingLetters] = React.useState(["Q", "J", "V", "M"]);
+  const [correctLetters] = React.useState([]);
+  const [wrongLetters] = React.useState([1, 2, 3, 4, 5]);
+  const [remainingLetters, setRemainingLetters] = React.useState([]);
   const [hint, setHint] = React.useState("");
   const [showHint, setShowHint] = React.useState(false);
 
@@ -55,6 +56,9 @@ const App = () => {
             marginTop: "20px",
           }}
           onClick={() => {
+            setRemainingLetters(
+              getRemainingLetters(currentWord, correctLetters)
+            );
             setHint(Hint(remainingLetters));
             setShowHint(true);
           }}
