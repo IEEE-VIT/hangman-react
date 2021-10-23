@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "./App.css";
 import randomWords from "random-words";
 import { ThemeContext } from "./context/theme-context";
@@ -10,7 +10,7 @@ const getRandomWord = () => {
 };
 
 const App = () => {
-  const [currentWord] = React.useState(getRandomWord());
+  const [currentWord, setCurrentWord] = React.useState("");
   console.log(currentWord);
   const { theme, toggle, dark } = React.useContext(ThemeContext);
   const [correctLetters] = React.useState([]);
@@ -18,7 +18,14 @@ const App = () => {
   const [remainingLetters, setRemainingLetters] = React.useState([]);
   const [hint, setHint] = React.useState("");
   const [showHint, setShowHint] = React.useState(false);
-
+  const [showHintButton, setShowHintButton] = React.useState(true);
+  useEffect(() => {
+    const randomWord = getRandomWord();
+    setCurrentWord(randomWord);
+  }, []);
+  useEffect(() => {
+    setRemainingLetters(getRemainingLetters(currentWord, correctLetters));
+  }, [correctLetters, currentWord]);
   return (
     <div
       className="App"
@@ -45,7 +52,7 @@ const App = () => {
       <h1> Hangman</h1>
       {/* Maintain a state for correct letters, wrong letters, remaining letters. For this, the Letters component and the Hangman component as well as the Guessing component should be imported.
       Wrong letters is passed as a prop to HangmanFigure Component, correct letters passed to Guessing. */}{" "}
-      {wrongLetters.length === 5 && (
+      {wrongLetters.length === 5 && showHintButton && (
         <button
           type="button"
           style={{
@@ -56,11 +63,9 @@ const App = () => {
             marginTop: "20px",
           }}
           onClick={() => {
-            setRemainingLetters(
-              getRemainingLetters(currentWord, correctLetters)
-            );
             setHint(Hint(remainingLetters));
             setShowHint(true);
+            setShowHintButton(false);
           }}
         >
           Hint
