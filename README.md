@@ -70,3 +70,4 @@ To start contributing, check out [CONTRIBUTING.md](https://github.com/IEEE-VIT/h
 ## License
 
 This project is licensed under [MIT](https://github.com/IEEE-VIT/hangman-react/blob/master/LICENSE.md)
+Thank You.
