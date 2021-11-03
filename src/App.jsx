@@ -19,11 +19,13 @@ const App = () => {
   const [hint, setHint] = React.useState("");
   const [showHint, setShowHint] = React.useState(false);
   const [showHintButton, setShowHintButton] = React.useState(true);
+  const chances = wrongLetters.length < 6 ? 6 - wrongLetters.length : 0;
+  console.log(chances, wrongLetters.length);
   const handleClickTop = (letter) => {
     console.log("clicked", letter);
     if (currentWord.includes(letter) === true) {
       setCorrectLetters(correctLetters + letter);
-    } else {
+    } else if (!wrongLetters.includes(letter)) {
       setWrongLetters(wrongLetters + letter);
     }
   };
@@ -81,6 +83,7 @@ const App = () => {
       )}
       {showHint && <h3 className="hint">{hint.toUpperCase()}</h3>}
       <Letters handleClickTop={handleClickTop} word={currentWord} />
+      <div>Chances left: {chances}</div>
     </div>
   );
 };
