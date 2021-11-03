@@ -61,17 +61,3 @@ export const getRemainingLetters = (currentWord, correctLetters) => {
   });
   return remainingLetters;
 };
-
-export const words = () => {
-  return [
-    "IEEEVIT",
-    "Hacktoberfest",
-    "GitHub",
-    "Git",
-    "FOSS",
-    "OpenSource",
-    "VIT",
-  ];
-
-  /* Import this in Guessing component and use it. */
-};
