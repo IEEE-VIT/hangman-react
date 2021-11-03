@@ -5,6 +5,7 @@ import { ThemeContext } from "./context/theme-context";
 import Hint from "./components/hint/hint.component";
 import { getRemainingLetters } from "./utils/helpers";
 import Letters from "./components/letters/Letters.component";
+import Guessing from "./components/guessing/Guessing.component";
 
 const getRandomWord = () => {
   return randomWords();
@@ -80,6 +81,11 @@ const App = () => {
         </button>
       )}
       {showHint && <h3 className="hint">{hint.toUpperCase()}</h3>}
+      <Guessing
+        currentWord={currentWord}
+        remainingLetters={remainingLetters}
+        correctLetters={correctLetters}
+      />
       <Letters handleClickTop={handleClickTop} word={currentWord} />
     </div>
   );
