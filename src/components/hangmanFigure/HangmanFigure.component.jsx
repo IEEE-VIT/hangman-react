@@ -1,11 +1,16 @@
 import React from "react";
 import "./hangmanFigure.styles.css";
 
-const HangmanFigure = ({ wrongLetters }) => {
+const HangmanFigure = ({ wrongLetters, stroke }) => {
   const errors = wrongLetters.length;
 
   return (
-    <svg height="250" width="200" className="figure-container">
+    <svg
+      height="250"
+      width="200"
+      className="figure-container"
+      style={{ stroke }}
+    >
       {/* <!-- Rod --> */}
       <line x1="60" y1="20" x2="140" y2="20" />
       <line x1="140" y1="20" x2="140" y2="50" />

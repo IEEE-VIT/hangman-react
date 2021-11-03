@@ -16,6 +16,7 @@ const Letters = ({ handleClickTop, word }) => {
         letterValue={letter}
         handleClick={handleClick}
         isCorrect={isCorrect}
+        key={letter}
       />
     );
   });

@@ -14,7 +14,7 @@ const Letter = ({ letterValue, handleClick, isCorrect }) => {
   } else if (clicked && !isCorrect) {
     backgroundColor = "red";
   }
-  console.log(clicked);
+
   return (
     <button
       className="letter"
