@@ -4,3 +4,26 @@
   stroke-width: 4px;
   stroke-linecap: round;
 }
+
+line {
+  animation: hideshow 5s ease-in;
+}
+
+circle {
+  animation: hideshow 5s ease-in;
+}
+
+@keyframes hideshow {
+  0% {
+    opacity: 0.25;
+  }
+  10% {
+    opacity: 0.5;
+  }
+  15% {
+    opacity: 0.75;
+  }
+  100% {
+    opacity: 1;
+  }
+}
