@@ -4,6 +4,7 @@ import randomWords from "random-words";
 import { ThemeContext } from "./context/theme-context";
 import Hint from "./components/hint/hint.component";
 import { getRemainingLetters } from "./utils/helpers";
+import Letters from "./components/letters/Letters.component";
 
 const getRandomWord = () => {
   return randomWords();
@@ -71,6 +72,7 @@ const App = () => {
         </button>
       )}
       {showHint && <h3 className="hint">{hint.toUpperCase()}</h3>}
+      <Letters />
     </div>
   );
 };

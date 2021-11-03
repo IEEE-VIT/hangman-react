@@ -1,1 +1,7 @@
 /*Add required CSS in letters component*/
+.letters{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin: 30px 25vw;
+}

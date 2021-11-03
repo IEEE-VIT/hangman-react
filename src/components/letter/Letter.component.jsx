@@ -1,16 +1,17 @@
 import React, { useState } from "react";
+import "./letter.styles.css";
 
-const Letter = ({letterValue}) => {
+const Letter = ({ letterValue }) => {
   const [clicked, setClicked] = useState(false);
 
   const handleonClick = () => {
-    setClicked(true)
-  }
-
+    setClicked(true);
+  };
+  console.log(clicked);
   return (
-    <div onClick={handleonClick}>
+    <button className="letter" type="button" onClick={handleonClick}>
       {letterValue}
-    </div>
+    </button>
   );
 };
 
