@@ -13,12 +13,20 @@ const getRandomWord = () => {
 const App = () => {
   const [currentWord, setCurrentWord] = React.useState("");
   const { theme, toggle, dark } = React.useContext(ThemeContext);
-  const [correctLetters] = React.useState([]);
-  const [wrongLetters] = React.useState([1, 2, 3, 4, 5]);
+  const [correctLetters, setCorrectLetters] = React.useState("");
+  const [wrongLetters, setWrongLetters] = React.useState("");
   const [remainingLetters, setRemainingLetters] = React.useState([]);
   const [hint, setHint] = React.useState("");
   const [showHint, setShowHint] = React.useState(false);
   const [showHintButton, setShowHintButton] = React.useState(true);
+  const handleClickTop = (letter) => {
+    console.log("clicked", letter);
+    if (currentWord.includes(letter) === true) {
+      setCorrectLetters(correctLetters + letter);
+    } else {
+      setWrongLetters(wrongLetters + letter);
+    }
+  };
   useEffect(() => {
     const randomWord = getRandomWord();
     setCurrentWord(randomWord);
@@ -72,7 +80,7 @@ const App = () => {
         </button>
       )}
       {showHint && <h3 className="hint">{hint.toUpperCase()}</h3>}
-      <Letters />
+      <Letters handleClickTop={handleClickTop} word={currentWord} />
     </div>
   );
 };
